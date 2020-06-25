@@ -1,0 +1,63 @@
+footer {
+  $button-width: 114px;
+  $menus-distance: 20px;
+
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: left;
+  background: #93938a;
+  height: 34px;
+  overflow: hidden;
+  color: $text-color;
+  &.hidden {
+    bottom: -34px;
+  }
+  a {
+    color: $text-color;
+  }
+  .social {
+    display: inline-block;
+    margin-right: $menus-distance;
+  }
+  .footer-menu {
+    margin-left: $menus-distance;
+  }
+  .footer-description {
+    width: calc( 100% - (#{$button-width} * 2) - 30px );
+    padding: 5px 15px;
+    text-align: center;
+    display: inline-block;
+    @include text-ellipsis();
+  }
+  .copyright {
+    font-size: 11px;
+  }
+  .logo-small-icon {
+    margin-bottom: -.5em;
+    margin-right: 5px;
+  }
+  .btn-footer {
+    $horizontal-padding: 80px;
+    color: #a8a89d;
+    font-size: 13px;
+    background: $text-color;
+    display: block;
+    float: left;
+    padding: 6px 0;
+    width: $button-width;
+    text-align: center;
+    &.btn-library {
+      float: right;
+      background: #a7a79c;
+      color: $text-color;
+    }
+  }
+  .facebook-icon, .twitter-icon {
+    margin-bottom: -.4em;
+    margin-right: 5px;
+  }
+}
+.loading footer {
+  bottom: -34px;
+}

@@ -1,0 +1,90 @@
+.preloader, .landing, .chapter, .video-player, .archive, .video-player-compact, .video-player-compact-documentary {
+  transition: .5s opacity;
+  transition-timing-function: cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+.preloader, .landing, .chapter, .video-player, .archive, .video-player-compact, .video-player-compact-documentary {
+  &.slide-up, &.slide-down, &.slide-scale-up, &.slide-scale-down {
+    transition: .5s transform ease-out;
+    transition-timing-function: cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  }
+}
+.preloader canvas {
+  transition: transform .4s, opacity .4s;
+  transition-timing-function: cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+.landing .chapter-title header {
+  transition: all .4s ease-out;
+}
+.chapter {
+  .bg {
+    transition: all 40s ease;
+  }
+  header {
+    transition: all 1s ease-out;
+    transition-delay: 1s;
+  }
+}
+.archive {
+  transition: .5s all ease-out;
+  transition-timing-function: cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+
+footer, .chapters, .player-footer-container, .related-items-container {
+  transition: all .4s ease-out;
+  //transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+.video-player-controls, .progress-bar-container, .related-items, .bar-bg, .bar-progress, .bar-progress-control {
+  transition: all .4s ease-out;
+  //transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+.info-popup .info, .info-popup .img {
+  transition: all .4s ease-out;
+}
+.buffering {
+  transition: all .4s;
+  transition-delay: 1s;
+  &.hidden {
+    transition-delay: 0s;
+  }
+}
+.info-popup {
+  transition: all .3s ease-out;
+  &.no-transition {
+    transition-duration: 0s;
+  }
+}
+.mini .info-popup {
+  transition: transform .4s, opacity .4s;
+  transition-timing-function: cubic-bezier(0.77,0,0.175,1);
+}
+.info-popup.compact {
+  transition: transform .4s, opacity .4s;
+  transition-timing-function: cubic-bezier(0.77,0,0.175,1);
+}
+.intro-buttons, .intro-buttons a {
+  transition: all .4s ease-out;
+}
+.intro-buttons {
+  transition-delay: .4s;
+}
+.filters a .arrow-down-icon {
+  transition: all .4s ease-out;
+}
+.related-videos-container li {
+  transition: all .8s ease-in;
+  //transition-timing-function: cubic-bezier(0.23,1,0.32,1);
+  //transition-timing-function: cubic-bezier(0.55,0.055,0.675,0.19);
+  transition-timing-function: cubic-bezier(0.77,0,0.175,1);
+}
+.landing {
+  .chapters {
+    transition: opacity .4s ease-out;
+  }
+  .chapters a {
+    transition: all .4s ease-out;
+  }
+}
+.top-button a {
+  transition: all .4s ease;
+  //transition-timing-function: cubic-bezier(0.77,0,0.175,1);
+}

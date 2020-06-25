@@ -1,0 +1,18 @@
+mixin googleMapImage(options)
+  - options = options || {}
+  - urlLink = options.urlLink || 'https://www.google.gr/maps/search/'
+  - url = options.url || 'http://maps.googleapis.com/maps/api/staticmap'
+  - address = encodeURI(options.address) || 'Iatriko+Diavalkaniko+Kentro+Thessalonikis'
+  - lat = options.lat || '40.547699'
+  - long = options.lat || '22.986844'
+  - zoom = options.zoom || 15
+  - width = options.width || 255
+  - height = options.height || 170
+  - maptype = options.maptype || 'roadmap'
+  - format = options.format || 'png'
+  - lang = options.lang || 'en'
+  - marker = 'markers=size:mid%7Ccolor:red%7C'+address
+  - key = 'AIzaSyD8y7IJNTgRSwbnoR-I1OopiRU721SZg3k'
+
+  a(href=urlLink + address +'?hl='+lang, target="_blank")
+    img(src=url+'?center='+address+'&zoom='+zoom+'&scale=false&size='+width+'x'+height+'&maptype='+maptype+'&key='+key+'&format='+format+'&markers='+marker+'&sensor=false&sensor=false', alt=address)

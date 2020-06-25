@@ -1,0 +1,14 @@
+mixin wp-gallery(images)
+  - if (!Array.isArray(images)) images = [images]
+  if images && images.length>0
+    .content-photos.photos.row
+      each img, index in images
+        .image-container.col-md-6
+          .ih-item.square.effect6.from_top_and_bottom
+            a.trigger(href=img, data-width=img.width?img.width:1024, data-height=img.height?img.height:768)
+              .img
+                img(src=img.src?img.src:img, width=img.width?img.width:'', height=img.height?img.height:'', alt=img.alt?img.alt:'Alternative text')
+              .info
+                .icons
+                  span.glyphicon(class=img.icon?img.icon:'icon-fullscreen-image')
+          p=img.label?img.label:'label'

@@ -1,0 +1,80 @@
+- groupByIndex = function(a, index) {
+-  var n = [];
+-  for (var i=0, l=a.length; i<l; i+=1) {
+-    var g = i;
+-    var t = []
+-    for (var p=0; p<index && i<l; p++) {
+-      t.push(a[g+p]);
+-      i++;
+-    }
+-    n.push(t)
+-    i--;
+-  }
+-  return n;
+-  };
+
+mixin carouselImage(img, index)
+  if (typeof img === 'string')
+    a(href=(img))
+      img(src=img)
+  else
+    if (img.mediaSrc)
+      div.carousel-media-control
+        a(href="#", data-media-type=img.mediaType || 'vimeo', data-media-src=img.mediaSrc, class=(index==0 ? 'active' : ''))
+          span.glyphicon.glyphicon-play
+      img(data-src=(typeof img == 'string'? img : img.src),
+      data-md-src=img.mdSrc?img.mdSrc:'',
+      data-sm-src=img.smSrc?img.smSrc:'',
+      data-xs-src=img.xsSrc?img.xsSrc:'')
+      if (img.caption)
+        .carousel-caption= img.caption
+
+mixin carouselThumbs(images, options, classes)
+  - options = options || {}
+
+  - autoplay = options.autoplay || "false";
+  - loadNextPrevious = options.loadNextPrevious || "true"
+  - imgStretch = options.imgStretch || "false"
+  - backgroundScale = options.backgroundScale || ""
+  - useCarouselControls = options.useCarouselControls || true
+  - useIndicators = options.useIndicators || false
+  - scaleBackgroundProportionally = options.scaleBackgroundProportionally || "true"
+  - bindToCarousel = options.bindToCarousel || null
+  - carouselId = options.id || null
+  - if (!Array.isArray(images)) images = [images]
+
+  div.carousel-thumbs.carousel.slide(
+    id=carouselId,
+    class=classes,
+    data-ride="responsive-carousel",
+    data-autoplay=autoplay,
+    data-load-next-previous=loadNextPrevious,
+    data-background-scale=backgroundScale,
+    data-scale-background-proportionally=scaleBackgroundProportionally,
+    data-img-stretch=imgStretch
+    data-bind-to-carousel=bindToCarousel
+  )
+    - images = groupByIndex(images, 3);
+
+    if (images.length>1 && useIndicators===true)
+      ol.carousel-indicators
+        each val, index in images
+          - isActive = index==0 ? 'active' : ''
+          li(class=isActive, data-slide-to=index)
+
+    div.carousel-inner
+      each imgItem, index in images
+        - isActive = index==0 ? 'active' : ''
+        div.item(class=isActive)
+          if (Array.isArray(imgItem))
+            each img, index in imgItem
+              .col-md-4
+                +carouselImage(img, index)
+          else
+            +carouselImage(imgItem,index)
+
+    if (images.length>1 && useCarouselControls===true)
+      a.left.carousel-control(href="#", data-slide="prev")
+        span.glyphicon.previous-icon
+      a.right.carousel-control(href="#", data-slide="next")
+        span.glyphicon.next-icon

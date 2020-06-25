@@ -1,0 +1,106 @@
+$pathToSprite : '../images/sprites.png';
+$pathToSpriteSVG : '../images/sprites.svg';
+$pathToFonts : '../fonts/';
+
+@import "autovariables";
+@import "variables";
+@import "mixins";
+
+//bootstrap
+// Core variables and mixins
+@import "../../node_modules/bootstrap/assets/stylesheets/bootstrap/variables";
+@import "../../node_modules/bootstrap/assets/stylesheets/bootstrap/mixins";
+
+@font-face {
+  font-family: 'Glyphicons Halflings';
+  src: url(if($bootstrap-sass-asset-helper, twbs-font-path('#{$icon-font-path}#{$icon-font-name}.eot'), '#{$icon-font-path}#{$icon-font-name}.eot'));
+  src: url(if($bootstrap-sass-asset-helper, twbs-font-path('#{$icon-font-path}#{$icon-font-name}.eot?#iefix'), '#{$icon-font-path}#{$icon-font-name}.eot?#iefix')) format('embedded-opentype'),
+  url(if($bootstrap-sass-asset-helper, twbs-font-path('#{$icon-font-path}#{$icon-font-name}.woff2'), '#{$icon-font-path}#{$icon-font-name}.woff2')) format('woff2'),
+  url(if($bootstrap-sass-asset-helper, twbs-font-path('#{$icon-font-path}#{$icon-font-name}.woff'), '#{$icon-font-path}#{$icon-font-name}.woff')) format('woff'),
+  url(if($bootstrap-sass-asset-helper, twbs-font-path('#{$icon-font-path}#{$icon-font-name}.ttf'), '#{$icon-font-path}#{$icon-font-name}.ttf')) format('truetype'),
+  url(if($bootstrap-sass-asset-helper, twbs-font-path('#{$icon-font-path}#{$icon-font-name}.svg##{$icon-font-svg-id}'), '#{$icon-font-path}#{$icon-font-name}.svg##{$icon-font-svg-id}')) format('svg');
+}
+
+// Reset and dependencies
+@import "../../node_modules/bootstrap/assets/stylesheets/bootstrap/normalize";
+@import "../../node_modules/bootstrap/assets/stylesheets/bootstrap/print";
+@import "../../node_modules/bootstrap/assets/stylesheets/bootstrap/glyphicons";
+
+// Core CSS
+@import "../../node_modules/bootstrap/assets/stylesheets/bootstrap/scaffolding";
+@import "../../node_modules/bootstrap/assets/stylesheets/bootstrap/type";
+//@import "../../node_modules/bootstrap/assets/stylesheets/bootstrap/code";
+@import "../../node_modules/bootstrap/assets/stylesheets/bootstrap/grid";
+//@import "../../node_modules/bootstrap/assets/stylesheets/bootstrap/tables";
+//@import "../../node_modules/bootstrap/assets/stylesheets/bootstrap/forms";
+@import "../../node_modules/bootstrap/assets/stylesheets/bootstrap/buttons";
+
+// Components
+@import "../../node_modules/bootstrap/assets/stylesheets/bootstrap/component-animations";
+//@import "../../node_modules/bootstrap/assets/stylesheets/bootstrap/dropdowns";
+//@import "../../node_modules/bootstrap/assets/stylesheets/bootstrap/button-groups";
+//@import "../../node_modules/bootstrap/assets/stylesheets/bootstrap/input-groups";
+//@import "../../node_modules/bootstrap/assets/stylesheets/bootstrap/navs";
+//@import "../../node_modules/bootstrap/assets/stylesheets/bootstrap/navbar";
+//@import "../../node_modules/bootstrap/assets/stylesheets/bootstrap/breadcrumbs";
+//@import "../../node_modules/bootstrap/assets/stylesheets/bootstrap/pagination";
+//@import "../../node_modules/bootstrap/assets/stylesheets/bootstrap/pager";
+//@import "../../node_modules/bootstrap/assets/stylesheets/bootstrap/labels";
+//@import "../../node_modules/bootstrap/assets/stylesheets/bootstrap/badges";
+//@import "../../node_modules/bootstrap/assets/stylesheets/bootstrap/jumbotron";
+//@import "../../node_modules/bootstrap/assets/stylesheets/bootstrap/thumbnails";
+//@import "../../node_modules/bootstrap/assets/stylesheets/bootstrap/alerts";
+//@import "../../node_modules/bootstrap/assets/stylesheets/bootstrap/progress-bars";
+//@import "../../node_modules/bootstrap/assets/stylesheets/bootstrap/media";
+//@import "../../node_modules/bootstrap/assets/stylesheets/bootstrap/list-group";
+//@import "../../node_modules/bootstrap/assets/stylesheets/bootstrap/panels";
+//@import "../../node_modules/bootstrap/assets/stylesheets/bootstrap/responsive-embed";
+//@import "../../node_modules/bootstrap/assets/stylesheets/bootstrap/wells";
+@import "../../node_modules/bootstrap/assets/stylesheets/bootstrap/close";
+
+// Components w/ JavaScript
+@import "../../node_modules/bootstrap/assets/stylesheets/bootstrap/modals";
+@import "../../node_modules/bootstrap/assets/stylesheets/bootstrap/tooltip";
+@import "../../node_modules/bootstrap/assets/stylesheets/bootstrap/popovers";
+//@import "../../node_modules/bootstrap/assets/stylesheets/bootstrap/carousel";
+
+// Utility classes
+//@import "../../node_modules/bootstrap/assets/stylesheets/bootstrap/utilities";
+@import "../../node_modules/bootstrap/assets/stylesheets/bootstrap/responsive-utilities";
+
+//@import "../../node_modules/ihover/client/styles/bourbon/bourbon";
+//@import "../../node_modules/ihover/client/styles/shared/variables";
+//@import "../../node_modules/ihover/client/styles/shared/default-styles";
+//@import "../../node_modules/ihover/client/styles/square/effect13";
+
+// Select2
+//@import "../../node_modules/poly-form-select2/_src/sass/poly-form-select2";
+
+// Components photoswipe
+//@import "../../node_modules/photoswipe/src/css/main";
+//$pswp__assets-path: '../images/';
+//@import "../../node_modules/photoswipe/src/css/default-skin/default-skin";
+//.pswp__caption__center {
+//  text-align: center;
+//}
+
+@import "transition";
+
+@import "base";
+@import "sprites";
+@import "icons";
+
+@import "footer";
+//@import "header";
+
+//@import "breadcrumb";
+//@import "carousel";
+//@import "dropdown";
+//@import "pagination";
+//@import "aside-menu";
+//@import "contact-form";
+//@import "filters";
+
+@import "dropdown";
+
+@import "pages/game";

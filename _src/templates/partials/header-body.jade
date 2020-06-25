@@ -1,0 +1,12 @@
+include ../mixins/navbar
+.header-bar
+  .container.top-header-sub-menu
+    ul.header-bar-menu.pull-right
+      li
+        a(href="#") Ελληνικά
+    ul.header-bar-menu.pull-right
+      li
+        a(href="contact.html") Contact
+.header
+  .container
+    +navbar({ activeIndex:mainMenuActiveIndex})

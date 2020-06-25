@@ -1,0 +1,33 @@
+mixin modal (options)
+  - var options = options || {};
+  - var id = options.id || 'myModal';
+  - var title = options.title || 'Modal title';
+  - var body = options.body || '<p>Μπράβο! Η παρέα καθορίζει την κοινωνική και πολιτισμική πρακτική των πανηγυριών καθώς οι συμμετέχοντες επικοινωνούν, κοινωνικοποιούνται και αλληλεπιδρούν συλλογικά μέσω παραδοσιακών, μουσικοχορευτικών δρώμενων και διαδικασιών.</p>';
+  - var closeButtonLabel = options.closeButtonLabel || 'Close';
+  - var saveButtonLabel = options.saveButtonLabel || 'Save changes';
+  - var showFooter = options.showFooter==null ? true : options.showFooter;
+  - var showTitle = options.showTitle==null ? true : options.showTitle;
+  - var showCloseButton = options.showCloseButton==null ? true : options.showCloseButton;
+  - var showFooterCloseButton = options.showFooterCloseButton==null ? true : options.showFooterCloseButton;
+  - var saveButtonClass = options.saveButtonClass || 'btn-primary';
+  - var backdrop = options.backdrop || true
+  - var keyboard = options.keyboard==null ? true : options.keyboard;
+  - var glyphicon = options.glyphicon;
+
+  .modal.fade(tabindex='-1', role='dialog' id=id data-backdrop=backdrop data-keyboard=keyboard)
+    .modal-dialog
+      .modal-content
+        .modal-header
+          if glyphicon
+            span.glyphicon(class=glyphicon)
+          if showCloseButton
+            button.close(type='button', data-dismiss='modal', aria-label=closeButtonLabel)
+              span(aria-hidden='true') ×
+          if showTitle
+            h4.modal-title=title
+        .modal-body!=body
+        if showFooter
+          .modal-footer
+            if showFooterCloseButton
+              button.btn.btn-default.cancel-button(type='button', data-dismiss='modal')=closeButtonLabel
+            button.btn.save-button(type='button' class=saveButtonClass)=saveButtonLabel

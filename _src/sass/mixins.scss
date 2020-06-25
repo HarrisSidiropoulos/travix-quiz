@@ -1,0 +1,66 @@
+@mixin column-count($column) {
+  -webkit-column-count: $column; /* Chrome, Safari, Opera */
+  -moz-column-count: $column; /* Firefox */
+  -ms-column-count: $column;
+  column-count: $column;
+}
+
+@mixin column-gap($gap) {
+  -webkit-column-gap: $gap; /* Chrome, Safari, Opera */
+  -moz-column-gap: $gap; /* Firefox */
+  -ms-column-gap: $gap;
+  column-count: $gap;
+}
+
+@mixin text-ellipsis() {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+@mixin noselect() {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+@mixin clear-row() {
+  &:before, &:after {
+    content: " ";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+@mixin background-opacity($color, $opacity: 0.3) {
+  background: $color; /* The Fallback */
+  background: rgba($color, $opacity);
+}
+
+@mixin center-block-element() {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+}
+
+@function em($px,
+$base: $font-size-base) {
+  @return ($px / $base) * 1em;
+}
+
+@mixin my-translate($x, $y) {
+  -webkit-transform: translate($x, $y); /* Chrome, Safari, Opera */
+  -moz-transform: translate($x, $y); /* Firefox */
+  -ms-transform: translate($x, $y);
+  transform: translate($x, $y);
+}

@@ -1,0 +1,14 @@
+mixin breadcrumb (options)
+  - var options = options || {};
+  - var currentClassName = options.currentClassName || 'current-cat';
+  - var menuItems = options.menuItems || Array.isArray(options) ? options : [];
+  - var useLabel = options.useLabel==='true';
+  - var activeIndex = options.activeIndex || menuItems.length-1;
+  ol.breadcrumb(class=options.classes, id=options.id)
+    if useLabel
+      li.breadcrumb-label
+        a(href="#")=options.label
+    each item,index in menuItems
+      - item.href = item.href || '#'
+      li(class=(index==activeIndex?'active '+currentClassName:null))
+        a(href=item.href, class=(index==activeIndex?currentClassName:null))=item.label||item

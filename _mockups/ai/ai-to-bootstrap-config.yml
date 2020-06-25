@@ -1,0 +1,1 @@
+#boostrap variablesboostrap_variables : brand-primary, brand-success, gray-darker, gray-dark, gray-light, body-bg# output file nameoutput_filename : autovariables# export filetype (accepts "scss", "css")export_format : scss

@@ -1,0 +1,23 @@
+mixin navbar(options)
+  - var options = options || {};
+  - var classes = options.classes || '';
+  - var activeIndex = options.activeIndex || 0;
+  - var id = options.id || 'top';
+  - var menus = options.menus || [[ { label:'About us', href:'about-us.html' }, { label:'Services', href:'services.html' }, { label:'Projects', href:'projects.html' }, { label:'News', href:'news.html' }]];
+  header.navbar(class=classes, id=id)
+    .navbar-header
+      h1
+        a.navbar-brand(href='./' title=brandName)=brandName
+
+      button.navbar-toggle(type='button', data-toggle='collapse', data-target='.bs-navbar-collapse')
+        span.sr-only Toggle navigation
+        span.icon-bar
+        span.icon-bar
+        span.icon-bar
+    nav.collapse.navbar-collapse.bs-navbar-collapse.sub-navbar
+      each menu, index in menus
+        ul.nav.navbar-nav(class=menu.classes, id=menu.id)
+          each menuItem, index in menu
+            - menuItem.classes = menuItem.classes || 'active'
+            li(class=index==activeIndex?'active ':'')
+              a.uppercase(href=menuItem.href, class=index==activeIndex?menuItem.classes:'')=menuItem.label

@@ -1,0 +1,137 @@
+@import "autovariables";
+$link-active-color: $link-hover-color !default;
+body {
+  font-family: $font-primary;
+  margin: 0;
+  background: $gray-light;
+  color: $text-color;
+}
+
+body, html {
+  @extend .base !optional;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.2em;
+}
+
+h1 { @extend .h1;
+  font-family: $font-secondary; }
+h2 { @extend .h2;
+  font-family: $font-primary; line-height: 1.2em; }
+h3 { @extend .h3;
+  font-family: $font-primary; }
+h4 { @extend .h4;
+  font-family: $font-secondary; }
+h5 { @extend .h5;
+  font-family: $font-primary; }
+h6 { @extend .h6;
+  font-family: $font-primary; }
+
+a {
+  @include noselect();
+  color: $link-color;
+  text-decoration: none;
+  cursor: pointer;
+  &:hover {
+    color: $link-hover-color;
+    text-decoration: none;
+  }
+  &.active {
+    color: $link-active-color;
+  }
+}
+.btn-lg {
+  padding: 10px 40px;
+}
+.center-img {
+  position: relative;
+  width: 160px;
+  height: 94px;
+  overflow: hidden;
+  img {
+    width: 160px;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(0, -50%);
+  }
+}
+.pull-left {
+  float: left;
+}
+.pull-right {
+  float: right;
+}
+.top-button {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100px;
+  z-index: 1000;
+  &:hover {
+    a {
+      padding: 12px 0 !important;
+    }
+  }
+  .back {
+    display: block;
+    background: #585852;
+    padding: 5px 0;
+    width: 100%;
+    color: #a7a79c;
+  }
+}
+video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+}
+.leanback {
+  * {
+    cursor: none;
+  }
+}
+.dropdown-menu-btn {
+  @include noselect();
+}
+.current-score {
+  position: absolute;
+  z-index: 100;
+  top: 43%;
+  left: 47%;
+  color: $brand-primary;
+  //text-shadow: 1px 1px $gray;
+  font-size: 100px;
+  opacity: 1;
+  transform: translate(-50%, -50%), scale(0,0);
+  pointer-events: none;
+  &.hidden {
+    opacity: 0;
+  }
+  &.visible {
+    display: block;
+    -webkit-animation: zoomAndFadeOut 1s ease-in-out;
+    animation: zoomAndFadeOut 1s ease-in-out;
+    animation-fill-mode: forwards;
+  }
+}
+@-webkit-keyframes zoomAndFadeOut {
+  0% {
+    transform: scale(0,0);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(3,3);
+    opacity: .7;
+  }
+  100% {
+    transform: scale(1.5,1.5);
+    opacity: 0;
+  }
+}

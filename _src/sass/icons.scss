@@ -1,0 +1,35 @@
+@import "sprites";
+
+//$hover-icons: facebook twitter close;
+//
+//@each $hover-icon in $hover-icons {
+//  @media (-webkit-min-device-pixel-ratio: 1.1), (min-device-pixel-ratio: 1.1),  (min-resolution: 105dpi), (min-resolution: 1.1dppx) {
+//    .#{$hover-icon}-icon {
+//      background-image: url($pathToSpriteSVG);
+//      background-size: $spriteWidth $spriteHeight;
+//    }
+//  }
+//  .#{$hover-icon}-icon {
+//    @extend .sprite_#{$hover-icon};
+//    &:hover {
+//      @extend .sprite_#{$hover-icon}-hover;
+//    }
+//  }
+//  a:hover .#{$hover-icon}-icon, a:focus .#{$hover-icon}-icon, button:hover .#{$hover-icon}-icon, button:focus .#{$hover-icon}-icon {
+//    @extend .sprite_#{$hover-icon}-hover;
+//  }
+//}
+
+$simple-icons: logo logo-en;
+
+@each $simple-icon in $simple-icons {
+  @media (-webkit-min-device-pixel-ratio: 1.1), (min-device-pixel-ratio: 1.1),  (min-resolution: 105dpi), (min-resolution: 1.1dppx) {
+    .#{$simple-icon}-icon {
+      background-image: url($pathToSpriteSVG);
+      background-size: $spriteWidth $spriteHeight;
+    }
+  }
+  .#{$simple-icon}-icon {
+    @extend .sprite_#{$simple-icon};
+  }
+}

@@ -1,0 +1,278 @@
+.pages {
+  position: relative;
+}
+.pages, .page {
+  margin: 0 auto;
+  @media (max-width: $screen-xs-min), (min-width: $screen-xs-min) {
+    width: 100%;
+    height: 100%;
+    padding-bottom: 30px;
+  }
+  @media (min-width: $screen-sm-min) {
+    width: $container-sm;
+    height: 100%;
+    padding-bottom: 30px;
+  }
+  @media (min-width: $screen-md-min) {
+    width: $container-md;
+    height: 621px;
+    overflow: hidden;
+  }
+  @media (min-width: $container-lg ) {
+    width: $container-lg;
+    height: 700px;
+    overflow: hidden;
+  }
+}
+.page {
+  position: absolute;
+  top: 100%;
+  transition: .5s all ease-out;
+  transition-timing-function: cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  min-height: 621px;
+  &.active {
+    top: 0;
+    display: block;
+    z-index: 1000;
+  }
+}
+.home {
+  min-height: 621px;
+  background: $gray-lighter url('../images/BG_Arxiki_Teliki.jpg') no-repeat center center;
+  background-size: cover;
+  padding: 0;
+  .logo-icon {
+    position: absolute;
+    top: 50px;
+    left: 37px;
+  }
+  .left-panel, .right-panel {
+    height: 100%;
+    min-height: 621px;
+  }
+  .left-panel {
+    background: rgba($gray-dark, .7);
+  }
+  .title {
+    font-size: 25px;
+    color: white;
+  }
+  .description {
+    font-size: 18px;
+  }
+  .title, .description {
+    padding: 0 25px;
+    margin-top: 200px;
+    @media (min-width: 1140px) {
+      margin-top: 250px;
+    }
+    @media (max-width: $screen-xs-max) {
+      margin-top: 160px;
+    }
+  }
+  @media (min-width: $screen-lg-min) {
+    .right-panel {
+      width: 58%;
+    }
+    .left-panel {
+      width: 42%;
+    }
+  }
+  .left-panel {
+    .description {
+      margin-top: 10px;
+      color: $body-bg;
+      @media (min-width: $screen-md-min) {
+        display: none;
+      }
+    }
+  }
+
+}
+.quiz {
+  background: $gray-darker;
+}
+.container {
+  @media (min-width: $screen-lg-min) {
+    width: $container-lg + 10px;
+  }
+}
+.left-panel {
+  float: left;
+  padding: 0 15px;
+  @media (max-width: $screen-sm-min), (min-width: $screen-sm-min) {
+    width: 100%;
+  }
+  @media (min-width: $screen-md-min) {
+    width: 40%;
+  }
+}
+.right-panel {
+  width: 60%;
+  float: left;
+  padding: 0 15px;
+  display: none;
+  @media (min-width: $screen-md-min) {
+    display: block;
+  }
+}
+header {
+  background: $brand-primary;
+  padding: 20px 0;
+  height: 62px;
+  color: $body-bg;
+  font-size: 16px;
+  .score {
+    float: right;
+    margin-right: 15px;
+  }
+  .score-value {
+    color: $gray-dark;
+  }
+}
+.question-heading {
+  position: relative;
+  display: block;
+  padding: 10px 0;
+  margin-top: 20px;
+  &:after {
+    content: "";
+    height: 1px;
+    width: 2em;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background: $body-bg;
+  }
+}
+.question {
+  padding: 15px 0;
+  font-size: 20px;
+  color: $brand-primary;
+  margin-bottom: 20px;
+  position: relative;
+  &:after {
+    content: ". . .";
+    color: $body-bg;
+    font-size: 26px;
+    height: auto;
+    width: 2em;
+    position: absolute;
+    left: 0;
+    bottom: -15px;
+  }
+}
+.answers {
+  margin-top: 30px;
+  position: relative;
+  z-index: 1;
+  @extend .list-unstyled;
+  li {
+    position: relative;
+    z-index: 1;
+  }
+  li a {
+    padding: 10px 0;
+    display: block;
+    color: $body-bg;
+    font-size: 17px;
+    transition: all .4s ease-out;
+    background: no-repeat -100% -100%;
+    text-align: left;
+    &:after {
+      content: "";
+      display: block;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 1px;
+      z-index: -1;
+      background: $brand-primary;
+      transition: all .2s ease-out;
+    }
+    &.success {
+      color: $brand-primary;
+      &:after {
+        background: $brand-primary;
+      }
+    }
+    &.error {
+      color: $brand-danger;
+      &:after {
+        background: $brand-danger;
+      }
+    }
+    &:hover, &:focus, &.selected {
+      color: white;
+      padding: 10px;
+      text-decoration: none;
+      &:after {
+        height: 100%;
+      }
+    }
+  }
+}
+.image-container {
+  width: calc(100% + 30px);
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+.question-container {
+  position: absolute;
+  width: 100%;
+  left: 100%;
+  padding: 0 15px;
+  transition: .5s all ease-out;
+  transition-timing-function: cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  &.active {
+    left: 0;
+    display: block;
+  }
+}
+.modal-dialog {
+  max-width: 500px;
+}
+.modal-header {
+  text-align: left;
+}
+.modal-header, .modal-footer, .modal-body {
+  border: none;
+  text-align: center;
+}
+.modal-footer, .modal-body, .modal-footer .btn {
+  font-size: 18px;
+}
+.modal-body {
+  padding: 10px 15px 15px;
+  .score-value {
+    color: darken($brand-primary, 10%);
+  }
+  .text-primary {
+    color: darken($brand-primary, 10%);
+    font-size: 22px;
+  }
+}
+.modal-footer {
+  margin-bottom: 20px;
+}
+
+#finishModal {
+  .modal-dialog {
+    max-width: 400px;
+  }
+}
+.btn-primary {
+  &.active.focus, &.active:focus, &.focus, &:active.focus, &:active:focus, &:focus {
+    outline: 5px auto darken($brand-primary, 20%);
+  }
+}
+
+.btn-danger {
+  &.active.focus, &.active:focus, &.focus, &:active.focus, &:active:focus, &:focus {
+    outline: 5px auto darken($brand-danger, 20%);
+  }
+}

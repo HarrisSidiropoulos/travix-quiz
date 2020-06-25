@@ -62,7 +62,7 @@
   },
   "dependencies": {
     "animationframe": "git://github.com/HarrisSidiropoulos/animationframe.git",
-    "jquery": "^2.1.1",
+    "jquery": "^3.5.0",
     "jquery-touch-events": "git+https://github.com/benmajor/jQuery-Touch-Events.git",
     "jquery.browser": "^0.1.0",
     "jquery.transit": "^0.9.12",

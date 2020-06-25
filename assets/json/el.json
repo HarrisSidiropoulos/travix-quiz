@@ -24,6 +24,30 @@
       ]
     },
     {
+      "question": "Jose says: I sleep only 4hrs per day",
+      "image": "Jose.jpg",
+      "answers":[
+        {"label":"True", "is-correct":"true", "description":""},
+        {"label":"False", "description":""}
+      ]
+    },
+    {
+      "question": "Jose says: I'm doing keto to loss weight.",
+      "image": "Jose.jpg",
+      "answers":[
+        {"label":"True", "description":""},
+        {"label":"False", "is-correct":"true", "description":""}
+      ]
+    },
+    {
+      "question": "Jose says: My favorite coffee size is the startbucks Tall, not necessarily filled with coffee from there. ",
+      "image": "Jose.jpg",
+      "answers":[
+        {"label":"True", "is-correct":"true", "description":""},
+        {"label":"False", "description":""}
+      ]
+    },
+    {
       "question": "Who is the person in the photo;",
       "image": "Yehor.png",
       "answers":[
@@ -50,6 +74,30 @@
       ]
     },
     {
+      "question": "Vlad says: Twice I was next to the President of Italy",
+      "image": "Vlad.jpg",
+      "answers":[
+        {"label":"True", "is-correct":"true", "description":""},
+        {"label":"False", "description":""}
+      ]
+    },
+    {
+      "question": "Vlad says: The year before I graduated from school, I planned to be a doctor",
+      "image": "Vlad.jpg",
+      "answers":[
+        {"label":"True", "description":""},
+        {"label":"False", "is-correct":"true",  "description":""}
+      ]
+    },
+    {
+      "question": "Vlad says: I performed on stage at a city festival",
+      "image": "Vlad.jpg",
+      "answers":[
+        {"label":"True", "is-correct":"true", "description":""},
+        {"label":"False", "description":""}
+      ]
+    },
+    {
       "question": "Who is the person in the photo;",
       "image": "Ihar.jpg",
       "answers":[
@@ -73,6 +121,30 @@
         {"label":"Faran", "is-correct":"true", "description":""},
         {"label":"Yehor", "description":""},
         {"label":"Harris", "description":""}
+      ]
+    },
+    {
+      "question": "Faran says: I wanted to become the Cardiologist since childhood",
+      "image": "Faran.png",
+      "answers":[
+        {"label":"True", "is-correct":"true", "description":""},
+        {"label":"False", "description":""}
+      ]
+    },
+    {
+      "question": "Faran says:  I have never been to the movie theatre",
+      "image": "Faran.png",
+      "answers":[
+        {"label":"True", "is-correct":"true", "description":""},
+        {"label":"False", "description":""}
+      ]
+    },
+    {
+      "question": "Faran says: My favorite sport is Cricket but not Football",
+      "image": "Faran.png",
+      "answers":[
+        {"label":"True", "description":""},
+        {"label":"False", "is-correct":"true", "description":""}
       ]
     }
   ]

@@ -1,3 +1,3 @@
 # music-museum-crete-game
 
-http://polyptychon.github.io/music-museum-crete-game/
+http://harrissidiropoulos.github.io/travix-quiz/

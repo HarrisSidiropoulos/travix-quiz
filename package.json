@@ -1,17 +1,17 @@
 {
-  "name": "kastoria",
+  "name": "travix quiz game",
   "version": "0.1.0",
-  "description": "kastoria.gr",
-  "homepage": "https://github.com/polyptychon/kastoria",
+  "description": "travix-quiz",
+  "homepage": "https://github.com/harrissidiropoulos/travix-quiz",
   "bugs": "",
   "main": "src/coffee/main.coffee",
   "author": {
     "name": "Harris Sidiropoulos",
-    "email": "sidiropoulos@polyptychon.gr"
+    "email": "harris.sidiropoulos@gmail.com"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/polyptychon/kastoria"
+    "url": "https://github.com/harrissidiropoulos/travix-quiz"
   },
   "browserify": {
     "transform": [

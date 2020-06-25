@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Travix Quiz</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--link(rel="icon" type="image/png" href="favicon.png")-->
+    <link type="text/css" rel="stylesheet" href="assets/css/main.css">
+    <script>var SUCCESS_SOUND="assets/sounds/success.mp3";var JSON_FILE="assets/json/el.json";(function() { document.addEventListener("DOMContentLoaded", function() { var u = document.querySelectorAll(".navbar-nav a, h2, .uppercase"); for (var i = 0, l = u.length; i < l; i++) { u[i].innerHTML = getAccText(u[i].innerHTML); } function getAccText(t) { t = t.replace(/Ά/g, "Α");t = t.replace(/ά/g, "α");t = t.replace(/Έ/g, "Ε");t = t.replace(/έ/g, "ε");t = t.replace(/Ή/g, "Η");t = t.replace(/ή/g, "η");t = t.replace(/Ί/g, "Ι");t = t.replace(/Ϊ/g, "Ι");t = t.replace(/ί/g, "ι");t = t.replace(/ϊ/g, "ι");t = t.replace(/ΐ/g, "ι");t = t.replace(/Ό/g, "Ο");t = t.replace(/ό/g, "ο");t = t.replace(/Ύ/g, "Υ");t = t.replace(/Ϋ/g, "Υ");t = t.replace(/ύ/g, "υ");t = t.replace(/ϋ/g, "υ");t = t.replace(/ΰ/g, "υ");t = t.replace(/Ώ/g, "Ω");t = t.replace(/ώ/g, "ω"); return t; } }); }());</script>
+  </head>
+  <body>
+    <div class="pages">
+      <div class="home page active">
+        <div class="left-panel">
+          <div class="title">TRAVIX QUIZ</div>
+          <div class="description">Recognize person by childhood picture<br><br>
+            <div class="btn btn-primary btn-lg">START</div></div>
+        </div>
+        <div class="right-panel">
+          <div class="description">Recognize person by childhood picture<br><br>
+            <div class="btn btn-primary btn-lg">START</div></div>
+        </div>
+      </div>
+      <div data-end-game-message="Congratulations! &lt;br&gt;You won &lt;span class='score-value'&gt;20/20&lt;/span&gt; points. &lt;br&gt;&lt;br&gt;You can play again." class="quiz page">
+        <header>
+          <div class="col-md-12">
+            <div class="score"><span class="score-name">SCORE&nbsp;&nbsp;</span><span class="score-value">0 / 25</span></div>
+          </div>
+        </header>
+        <div class="container quiz-container">
+          <div class="question-container active">
+            <div class="left-panel">
+              <h4 class="question-heading"><span class="question-name">QUESTION&nbsp;</span><span class="question-value">( 1 / 5 )</span></h4>
+              <div class="question">Who is the person in the photo;</div>
+              <ul class="answers">
+                <li><a data-description="" data-is-correct="true" href="javascript:" class="btn">A. Jose</a>
+                </li>
+                <li><a data-description="" data-is-correct="false" href="javascript:" class="btn">B. Ihar</a>
+                </li>
+                <li><a data-description="" data-is-correct="false" href="javascript:" class="btn">C. Vlad</a>
+                </li>
+                <li><a data-description="" data-is-correct="false" href="javascript:" class="btn">D. Ivan</a>
+                </li>
+                <li><a data-description="" data-is-correct="false" href="javascript:" class="btn">E. Faran</a>
+                </li>
+                <li><a data-description="" data-is-correct="false" href="javascript:" class="btn">F. Yehor</a>
+                </li>
+                <li><a data-description="" data-is-correct="false" href="javascript:" class="btn">G. Harris</a>
+                </li>
+              </ul>
+            </div>
+            <div class="right-panel">
+              <div class="image-container"><img src="assets/images/Jose.jpg" alt="assets/images/Jose.jpg" width="560" height="555"></div>
+            </div>
+          </div>
+          <div class="question-container">
+            <div class="left-panel">
+              <h4 class="question-heading"><span class="question-name">QUESTION&nbsp;</span><span class="question-value">( 2 / 5 )</span></h4>
+              <div class="question">Who is the person in the photo;</div>
+              <ul class="answers">
+                <li><a data-description="" data-is-correct="false" href="javascript:" class="btn">A. Jose</a>
+                </li>
+                <li><a data-description="" data-is-correct="false" href="javascript:" class="btn">B. Ihar</a>
+                </li>
+                <li><a data-description="" data-is-correct="false" href="javascript:" class="btn">C. Vlad</a>
+                </li>
+                <li><a data-description="" data-is-correct="false" href="javascript:" class="btn">D. Ivan</a>
+                </li>
+                <li><a data-description="" data-is-correct="false" href="javascript:" class="btn">E. Faran</a>
+                </li>
+                <li><a data-description="" data-is-correct="true" href="javascript:" class="btn">F. Yehor</a>
+                </li>
+                <li><a data-description="" data-is-correct="false" href="javascript:" class="btn">G. Harris</a>
+                </li>
+              </ul>
+            </div>
+            <div class="right-panel">
+              <div class="image-container"><img src="assets/images/Yehor.png" alt="assets/images/Yehor.png" width="560" height="555"></div>
+            </div>
+          </div>
+          <div class="question-container">
+            <div class="left-panel">
+              <h4 class="question-heading"><span class="question-name">QUESTION&nbsp;</span><span class="question-value">( 3 / 5 )</span></h4>
+              <div class="question">Who is the person in the photo;</div>
+              <ul class="answers">
+                <li><a data-description="" data-is-correct="false" href="javascript:" class="btn">A. Jose</a>
+                </li>
+                <li><a data-description="" data-is-correct="false" href="javascript:" class="btn">B. Ihar</a>
+                </li>
+                <li><a data-description="" data-is-correct="true" href="javascript:" class="btn">C. Vlad</a>
+                </li>
+                <li><a data-description="" data-is-correct="false" href="javascript:" class="btn">D. Ivan</a>
+                </li>
+                <li><a data-description="" data-is-correct="false" href="javascript:" class="btn">E. Faran</a>
+                </li>
+                <li><a data-description="" data-is-correct="false" href="javascript:" class="btn">F. Yehor</a>
+                </li>
+                <li><a data-description="" data-is-correct="false" href="javascript:" class="btn">G. Harris</a>
+                </li>
+              </ul>
+            </div>
+            <div class="right-panel">
+              <div class="image-container"><img src="assets/images/Vlad.jpg" alt="assets/images/Vlad.jpg" width="560" height="555"></div>
+            </div>
+          </div>
+          <div class="question-container">
+            <div class="left-panel">
+              <h4 class="question-heading"><span class="question-name">QUESTION&nbsp;</span><span class="question-value">( 4 / 5 )</span></h4>
+              <div class="question">Who is the person in the photo;</div>
+              <ul class="answers">
+                <li><a data-description="" data-is-correct="false" href="javascript:" class="btn">A. Jose</a>
+                </li>
+                <li><a data-description="" data-is-correct="true" href="javascript:" class="btn">B. Ihar</a>
+                </li>
+                <li><a data-description="" data-is-correct="false" href="javascript:" class="btn">C. Vlad</a>
+                </li>
+                <li><a data-description="" data-is-correct="false" href="javascript:" class="btn">D. Ivan</a>
+                </li>
+                <li><a data-description="" data-is-correct="false" href="javascript:" class="btn">E. Faran</a>
+                </li>
+                <li><a data-description="" data-is-correct="false" href="javascript:" class="btn">F. Yehor</a>
+                </li>
+                <li><a data-description="" data-is-correct="false" href="javascript:" class="btn">G. Harris</a>
+                </li>
+              </ul>
+            </div>
+            <div class="right-panel">
+              <div class="image-container"><img src="assets/images/Ihar.jpg" alt="assets/images/Ihar.jpg" width="560" height="555"></div>
+            </div>
+          </div>
+          <div class="question-container">
+            <div class="left-panel">
+              <h4 class="question-heading"><span class="question-name">QUESTION&nbsp;</span><span class="question-value">( 5 / 5 )</span></h4>
+              <div class="question">Who is the person in the photo;</div>
+              <ul class="answers">
+                <li><a data-description="" data-is-correct="false" href="javascript:" class="btn">A. Jose</a>
+                </li>
+                <li><a data-description="" data-is-correct="false" href="javascript:" class="btn">B. Ihar</a>
+                </li>
+                <li><a data-description="" data-is-correct="false" href="javascript:" class="btn">C. Vlad</a>
+                </li>
+                <li><a data-description="" data-is-correct="false" href="javascript:" class="btn">D. Ivan</a>
+                </li>
+                <li><a data-description="" data-is-correct="true" href="javascript:" class="btn">E. Faran</a>
+                </li>
+                <li><a data-description="" data-is-correct="false" href="javascript:" class="btn">F. Yehor</a>
+                </li>
+                <li><a data-description="" data-is-correct="false" href="javascript:" class="btn">G. Harris</a>
+                </li>
+              </ul>
+            </div>
+            <div class="right-panel">
+              <div class="image-container"><img src="assets/images/Faran.png" alt="assets/images/Faran.png" width="560" height="555"></div>
+            </div>
+          </div>
+        </div>
+        <div class="current-score hidden">+3</div>
+      </div>
+    </div>
+    <div tabindex="-1" role="dialog" id="errorModal" data-backdrop="data-backdrop" data-keyboard="data-keyboard" class="modal fade">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">×</span></button>
+          </div>
+          <div class="modal-body"><p>Μπράβο! Η παρέα καθορίζει την κοινωνική και πολιτισμική πρακτική των πανηγυριών καθώς οι συμμετέχοντες επικοινωνούν, κοινωνικοποιούνται και αλληλεπιδρούν συλλογικά μέσω παραδοσιακών, μουσικοχορευτικών δρώμενων και διαδικασιών.</p></div>
+          <div class="modal-footer">
+            <button type="button" class="btn save-button btn-danger">Try again</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div tabindex="-1" role="dialog" id="successModal" data-backdrop="static" data-keyboard="false" class="modal fade">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+          </div>
+          <div class="modal-body"><p>Μπράβο! Η παρέα καθορίζει την κοινωνική και πολιτισμική πρακτική των πανηγυριών καθώς οι συμμετέχοντες επικοινωνούν, κοινωνικοποιούνται και αλληλεπιδρούν συλλογικά μέσω παραδοσιακών, μουσικοχορευτικών δρώμενων και διαδικασιών.</p></div>
+          <div class="modal-footer">
+            <button type="button" class="btn save-button btn-primary">Next Question</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div tabindex="-1" role="dialog" id="finishModal" data-backdrop="static" data-keyboard="false" class="modal fade">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+          </div>
+          <div class="modal-body"><p>Μπράβο! Η παρέα καθορίζει την κοινωνική και πολιτισμική πρακτική των πανηγυριών καθώς οι συμμετέχοντες επικοινωνούν, κοινωνικοποιούνται και αλληλεπιδρούν συλλογικά μέσω παραδοσιακών, μουσικοχορευτικών δρώμενων και διαδικασιών.</p></div>
+          <div class="modal-footer">
+            <button type="button" class="btn save-button btn-primary">Restart game</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript" src="assets/js/main.js" async></script>
+  </body>
+</html>

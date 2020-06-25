@@ -1,0 +1,79 @@
+{
+  "title": "Travix Quiz",
+  "description": "Recognize person by childhood picture",
+  "score-label": "Score",
+  "question-label": "Question",
+  "start-button-label": "Start",
+  "error-button-label": "Try again",
+  "next-question-button-label": "Next Question",
+  "restart-game-button-label": "Restart game",
+  "end-game-message": "Congratulations! <br>You won <span class='score-value'>20/20</span> points. <br><br>You can play again.",
+  "letters":["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","x","y","z"],
+  "questions":[
+    {
+      "question": "Who is the person in the photo;",
+      "image": "Jose.jpg",
+      "answers":[
+        {"label":"Jose", "is-correct":"true", "description":""},
+        {"label":"Ihar", "description":""},
+        {"label":"Vlad", "description":""},
+        {"label":"Ivan", "description":""},
+        {"label":"Faran", "description":""},
+        {"label":"Yehor", "description":""},
+        {"label":"Harris", "description":""}
+      ]
+    },
+    {
+      "question": "Who is the person in the photo;",
+      "image": "Yehor.png",
+      "answers":[
+        {"label":"Jose", "description":""},
+        {"label":"Ihar", "description":""},
+        {"label":"Vlad", "description":""},
+        {"label":"Ivan", "description":""},
+        {"label":"Faran", "description":""},
+        {"label":"Yehor", "is-correct":"true", "description":""},
+        {"label":"Harris", "description":""}
+      ]
+    },
+    {
+      "question": "Who is the person in the photo;",
+      "image": "Vlad.jpg",
+      "answers":[
+        {"label":"Jose", "description":""},
+        {"label":"Ihar", "description":""},
+        {"label":"Vlad", "is-correct":"true", "description":""},
+        {"label":"Ivan", "description":""},
+        {"label":"Faran", "description":""},
+        {"label":"Yehor", "description":""},
+        {"label":"Harris", "description":""}
+      ]
+    },
+    {
+      "question": "Who is the person in the photo;",
+      "image": "Ihar.jpg",
+      "answers":[
+        {"label":"Jose", "description":""},
+        {"label":"Ihar", "is-correct":"true", "description":""},
+        {"label":"Vlad", "description":""},
+        {"label":"Ivan", "description":""},
+        {"label":"Faran", "description":""},
+        {"label":"Yehor", "description":""},
+        {"label":"Harris", "description":""}
+      ]
+    },
+    {
+      "question": "Who is the person in the photo;",
+      "image": "Faran.png",
+      "answers":[
+        {"label":"Jose", "description":""},
+        {"label":"Ihar", "description":""},
+        {"label":"Vlad", "description":""},
+        {"label":"Ivan", "description":""},
+        {"label":"Faran", "is-correct":"true", "description":""},
+        {"label":"Yehor", "description":""},
+        {"label":"Harris", "description":""}
+      ]
+    }
+  ]
+}
